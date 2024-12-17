@@ -48,9 +48,7 @@ class FilamentNestedBuilderFormServiceProvider extends PackageServiceProvider
         }*/
     }
 
-    public function packageRegistered(): void
-    {
-    }
+    public function packageRegistered(): void {}
 
     public function packageBooted(): void
     {
@@ -78,7 +76,7 @@ class FilamentNestedBuilderFormServiceProvider extends PackageServiceProvider
         }*/
 
         // Testing
-        Testable::mixin(new TestsFilamentNestedBuilderForm());
+        Testable::mixin(new TestsFilamentNestedBuilderForm);
     }
 
     protected function getAssetPackageName(): ?string

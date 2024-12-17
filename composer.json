@@ -1,5 +1,5 @@
 {
-    "name": "thiktak/filament-nested-builder-form",
+    "name": "ferdiunal/filament-nested-builder-form",
     "description": "Plugin for FilamentPHP - Nested Builder Form Component",
     "keywords": [
         "Thiktak",
@@ -15,16 +15,16 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Georges OLIVARES",
-            "email": "georges.olivares@gmail.com",
+            "name": "Ferdi ÜNAL",
+            "email": "ferdiunal@outlook.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.3",
         "filament/forms": "^3.0",
         "spatie/laravel-package-tools": "^1.15.0",
-        "illuminate/contracts": "^10.0"
+        "illuminate/contracts": "^10.0|^11.0"
     },
     "require-dev": {
         "laravel/pint": "^1.0",

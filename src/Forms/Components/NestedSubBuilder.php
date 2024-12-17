@@ -55,7 +55,7 @@ class NestedSubBuilder extends Builder
         return [];
     }
 
-    public function importNestedBlocks($make, string $name = null): Builder
+    public function importNestedBlocks($make, ?string $name = null): Builder
     {
         $nestedComponents = $this->getNestedBuilder()->getNestedNamedChildComponents($name ?: 'default');
 

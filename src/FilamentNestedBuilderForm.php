@@ -2,6 +2,4 @@
 
 namespace Thiktak\FilamentNestedBuilderForm;
 
-class FilamentNestedBuilderForm
-{
-}
+class FilamentNestedBuilderForm {}
