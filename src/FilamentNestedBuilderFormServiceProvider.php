@@ -91,8 +91,8 @@ class FilamentNestedBuilderFormServiceProvider extends PackageServiceProvider
     {
         return [
             // AlpineComponent::make('skeleton', __DIR__ . '/../resources/dist/components/skeleton.js'),
-            //Css::make('skeleton-styles', __DIR__ . '/../resources/dist/skeleton.css'),
-            //Js::make('skeleton-scripts', __DIR__ . '/../resources/dist/skeleton.js'),
+            // Css::make('skeleton-styles', __DIR__ . '/../resources/dist/skeleton.css'),
+            // Js::make('skeleton-scripts', __DIR__ . '/../resources/dist/skeleton.js'),
         ];
     }
 
@@ -102,7 +102,7 @@ class FilamentNestedBuilderFormServiceProvider extends PackageServiceProvider
     protected function getCommands(): array
     {
         return [
-            //SkeletonCommand::class,
+            // SkeletonCommand::class,
         ];
     }
 
@@ -136,7 +136,7 @@ class FilamentNestedBuilderFormServiceProvider extends PackageServiceProvider
     protected function getMigrations(): array
     {
         return [
-            //'create_skeleton_table',
+            // 'create_skeleton_table',
         ];
     }
 }
