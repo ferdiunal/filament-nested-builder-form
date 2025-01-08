@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Thiktak\FilamentNestedBuilderForm\Forms\Components;
 
 use Filament\Forms\Components\Builder;
@@ -36,15 +38,15 @@ class NestedSubBuilder extends Builder
 
     public function getChildComponents(): array
     {
-        if (! $this->childComponents) {
+        if ( ! $this->childComponents) {
             $this->childComponents(
                 (array) $this->evaluate(
                     $this->getNestedBuilder()->getNestedNamedChildComponents(),
                     [
                         'builder' => $this,
                         'parent' => $this->getNestedBuilder(),
-                    ]
-                )
+                    ],
+                ),
             );
         }
 
@@ -70,12 +72,12 @@ class NestedSubBuilder extends Builder
 
         // Add schema
         $builder = $builder
-            ->schema(fn () => $this->evaluate(
+            ->schema(fn() => $this->evaluate(
                 $nestedComponents,
                 [
                     'builder' => $builder,
                     'parent' => $this->getNestedBuilder(),
-                ]
+                ],
             ));
 
         return $builder;

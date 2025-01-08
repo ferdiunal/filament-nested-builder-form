@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Thiktak\FilamentNestedBuilderForm;
 
 use Filament\Support\Assets\AlpineComponent;
@@ -55,12 +57,12 @@ class FilamentNestedBuilderFormServiceProvider extends PackageServiceProvider
         // Asset Registration
         FilamentAsset::register(
             $this->getAssets(),
-            $this->getAssetPackageName()
+            $this->getAssetPackageName(),
         );
 
         FilamentAsset::registerScriptData(
             $this->getScriptData(),
-            $this->getAssetPackageName()
+            $this->getAssetPackageName(),
         );
 
         // Icon Registration
@@ -76,7 +78,7 @@ class FilamentNestedBuilderFormServiceProvider extends PackageServiceProvider
         }*/
 
         // Testing
-        Testable::mixin(new TestsFilamentNestedBuilderForm);
+        Testable::mixin(new TestsFilamentNestedBuilderForm());
     }
 
     protected function getAssetPackageName(): ?string

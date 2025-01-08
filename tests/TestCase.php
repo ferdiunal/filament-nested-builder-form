@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace VendorName\Skeleton\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
@@ -27,8 +29,18 @@ class TestCase extends Orchestra
         parent::setUp();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'VendorName\\Skeleton\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn(string $modelName) => 'VendorName\\Skeleton\\Database\\Factories\\' . class_basename($modelName) . 'Factory',
         );
+    }
+
+    public function getEnvironmentSetUp($app): void
+    {
+        config()->set('database.default', 'testing');
+
+        /*
+        $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
+        $migration->up();
+        */
     }
 
     protected function getPackageProviders($app)
@@ -50,15 +62,5 @@ class TestCase extends Orchestra
             WidgetsServiceProvider::class,
             SkeletonServiceProvider::class,
         ];
-    }
-
-    public function getEnvironmentSetUp($app)
-    {
-        config()->set('database.default', 'testing');
-
-        /*
-        $migration = include __DIR__.'/../database/migrations/create_skeleton_table.php.stub';
-        $migration->up();
-        */
     }
 }

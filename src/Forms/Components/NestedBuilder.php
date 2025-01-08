@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Thiktak\FilamentNestedBuilderForm\Forms\Components;
 
 use Closure;
@@ -28,7 +30,8 @@ class NestedBuilder extends NestedSubBuilder
     {
         if (isset($this->nestedSchemas[$name])) {
             return $this->nestedSchemas[$name];
-        } elseif (isset($this->nestedSchemas[$fallbackName])) {
+        }
+        if (isset($this->nestedSchemas[$fallbackName])) {
             return $this->nestedSchemas[$fallbackName];
         }
 
