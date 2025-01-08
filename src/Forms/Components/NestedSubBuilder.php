@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=0);
-
 namespace Thiktak\FilamentNestedBuilderForm\Forms\Components;
 
 use Filament\Forms\Components\Builder;

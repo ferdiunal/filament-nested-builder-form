@@ -1,7 +1,5 @@
 <?php
 
-declare(strict_types=0);
-
 namespace VendorName\Skeleton\Tests;
 
 use BladeUI\Heroicons\BladeHeroiconsServiceProvider;
