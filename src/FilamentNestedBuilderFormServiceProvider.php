@@ -76,7 +76,7 @@ class FilamentNestedBuilderFormServiceProvider extends PackageServiceProvider
         }*/
 
         // Testing
-        Testable::mixin(new TestsFilamentNestedBuilderForm);
+        Testable::mixin(new TestsFilamentNestedBuilderForm());
     }
 
     protected function getAssetPackageName(): ?string
