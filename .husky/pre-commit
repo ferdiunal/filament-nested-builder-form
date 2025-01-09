@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo "🎨 Laravel Pint ile kod formatlanıyor..."
+./vendor/bin/pint
+
+echo "🎨 Laravel Scramble ile API dokümantasyonu analiz ediliyor..."
+php artisan scramble:analyze
+
+git add .
+
+echo "✅ Kod başarıyla formatlandı."
